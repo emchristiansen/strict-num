@@ -1,6 +1,6 @@
 [package]
 name = "strict-num"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Yevhenii Reizner <razrfalcon@gmail.com>"]
 license = "MIT"
 description = "A collection of bounded numeric types"
@@ -8,10 +8,15 @@ repository = "https://github.com/RazrFalcon/strict-num"
 documentation = "https://docs.rs/strict-num/"
 categories = ["mathematics", "no-std"]
 readme = "README.md"
-edition = "2018"
+edition = "2021"
+rust-version = "1.56"
 
 [dependencies]
 float-cmp = { version = "0.9", default-features = false, features = ["std"], optional = true }
+serde = { version = "1", optional = true }
+
+[dev-dependencies]
+serde_json = "1"
 
 [features]
 default = ["approx-eq"]
